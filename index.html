@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mago do Excel — Do primeiro clique ao domínio completo</title>
+  <meta name="description" content="Aprenda Excel do básico ao avançado com os cursos Aprendiz do Excel e Mago do Excel Pro." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* ── Intro overlay ── */
+    #introOverlay {
+      position: fixed;
+      inset: 0;
+      z-index: 10000;
+      background: #0a1a0f;
+      cursor: default;
+    }
+    #introCanvas {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ✨ Tela de intro mágica ── -->
+  <div id="introOverlay">
+    <canvas id="introCanvas"></canvas>
+  </div>
+
+  <!-- Scroll progress bar -->
+  <div id="progressBar"></div>
+
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="#inicio" aria-label="Mago do Excel">
+        <img src="images/mago_logo.jpg" alt="Logo Mago do Excel">
+        <span>Mago do Excel</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Menu principal">
+        <a href="#inicio">Início</a>
+        <a href="#cursos">Cursos</a>
+        <a href="#beneficios">Benefícios</a>
+        <a href="#comparativo">Comparativo</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="nav-cta">
+        <a class="btn btn-primary" href="#inscricao">Quero começar</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow reveal">🧙‍♂️ Do básico ao avançado</span>
+          <h1 class="reveal">Aprenda Excel <strong>do jeito certo.</strong></h1>
+          <p class="hero-p reveal">
+            Da primeira fórmula aos dashboards profissionais. Entre na jornada do
+            <strong>Aprendiz do Excel</strong> e evolua até o nível <strong>Mago do Excel Pro</strong>, com aulas práticas e foco no mercado de trabalho.
+          </p>
+          <div class="hero-actions reveal">
+            <a class="btn btn-primary" href="#cursos">Conhecer os cursos →</a>
+            <a class="btn btn-ghost" href="#comparativo">Ver comparação</a>
+          </div>
+          <div class="hero-stats reveal">
+            <div class="stat">
+              <strong data-target="2" data-suffix="">2</strong>
+              <span>níveis de curso</span>
+            </div>
+            <div class="stat">
+              <strong data-target="100" data-suffix="%">100%</strong>
+              <span>online e prático</span>
+            </div>
+            <div class="stat">
+              <strong>Cert.</strong>
+              <span>incluso</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-label="Cursos Mago do Excel">
+          <div class="visual-card">
+            <img src="images/aprendiz_excel.jpg" alt="Imagem do curso Aprendiz do Excel">
+            <div class="visual-tag">📗 Aprendiz do Excel</div>
+          </div>
+          <div class="visual-card">
+            <img src="images/mago_excel.jpg" alt="Imagem do curso Mago do Excel Pro">
+            <div class="visual-tag">🪄 Mago do Excel Pro</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="cursos">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Escolha sua jornada</span>
+          <h2>Do aprendiz ao mago.</h2>
+          <p>Você pode começar do zero ou ir direto para técnicas mais profissionais, dependendo do seu nível atual.</p>
+        </div>
+
+        <div class="courses-grid">
+          <article class="course-card reveal">
+            <div class="course-image">
+              <span class="course-level">Nível básico</span>
+              <img src="images/aprendiz_curso.jpg" alt="Curso Aprendiz do Excel">
+            </div>
+            <div class="course-content">
+              <h3>Aprendiz do Excel</h3>
+              <p class="course-desc">Ideal para quem está começando e quer ganhar confiança para usar planilhas no estudo, trabalho e processos do dia a dia.</p>
+              <ul class="course-list">
+                <li>Interface do Excel e organização de planilhas</li>
+                <li>Fórmulas básicas e essenciais</li>
+                <li>Formatação profissional</li>
+                <li>Tabelas, filtros e gráficos simples</li>
+                <li>Exercícios práticos para fixação</li>
+                <li>Certificado de conclusão</li>
+              </ul>
+              <div class="price-row">
+                <div class="price">
+                  <small>Curso inicial</small>
+                  <strong>R$ 97</strong>
+                </div>
+                <a class="btn btn-primary" href="#inscricao">Quero ser Aprendiz</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-card reveal">
+            <div class="course-image">
+              <span class="course-level">Nível avançado</span>
+              <img src="images/mago_curso.jpg" alt="Curso Mago do Excel Pro">
+            </div>
+            <div class="course-content">
+              <h3>Mago do Excel Pro</h3>
+              <p class="course-desc">Para quem já conhece o básico e deseja dominar recursos que realmente fazem diferença no ambiente profissional.</p>
+              <ul class="course-list">
+                <li>PROCX, SOMASES, CONT.SES e fórmulas avançadas</li>
+                <li>Tabelas dinâmicas e análise de dados</li>
+                <li>Dashboards executivos e visuais profissionais</li>
+                <li>Power Query para limpeza e consolidação</li>
+                <li>Automação de rotinas e projetos corporativos</li>
+                <li>Certificado de conclusão</li>
+              </ul>
+              <div class="price-row">
+                <div class="price">
+                  <small>Curso avançado</small>
+                  <strong>R$ 197</strong>
+                </div>
+                <a class="btn btn-primary" href="#inscricao">Quero virar Mago</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="beneficios">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Por que aprender aqui?</span>
+          <h2>Excel direto para o mundo real.</h2>
+          <p>Conteúdo prático, visual e pensado para quem quer aplicar Excel em rotina profissional.</p>
+        </div>
+
+        <div class="benefits-grid">
+          <article class="benefit reveal">
+            <div class="benefit-icon">📊</div>
+            <h3>Projetos práticos</h3>
+            <p>Aprenda criando planilhas, relatórios e dashboards que simulam demandas reais de empresas.</p>
+          </article>
+          <article class="benefit reveal">
+            <div class="benefit-icon">⚡</div>
+            <h3>Mais produtividade</h3>
+            <p>Saia do trabalho manual e aprenda formas mais rápidas de analisar e organizar informações.</p>
+          </article>
+          <article class="benefit reveal">
+            <div class="benefit-icon">🏆</div>
+            <h3>Certificado</h3>
+            <p>Finalize o treinamento com certificado para fortalecer currículo, LinkedIn e entrevistas.</p>
+          </article>
+          <article class="benefit reveal">
+            <div class="benefit-icon">🧠</div>
+            <h3>Didática simples</h3>
+            <p>Explicações passo a passo para evoluir com segurança, sem pular fundamentos importantes.</p>
+          </article>
+          <article class="benefit reveal">
+            <div class="benefit-icon">💼</div>
+            <h3>Foco profissional</h3>
+            <p>Aprenda recursos utilizados em áreas como financeiro, administrativo, vendas e operações.</p>
+          </article>
+          <article class="benefit reveal">
+            <div class="benefit-icon">🪄</div>
+            <h3>Jornada evolutiva</h3>
+            <p>Comece como Aprendiz e avance até o nível Mago, dominando ferramentas mais poderosas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="comparativo">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Comparativo</span>
+          <h2>Qual curso escolher?</h2>
+          <p>Veja rapidamente qual treinamento combina melhor com seu momento atual.</p>
+        </div>
+
+        <div class="compare-wrap reveal">
+          <table>
+            <thead>
+              <tr>
+                <th>Recursos</th>
+                <th>Aprendiz do Excel</th>
+                <th>Mago do Excel Pro</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Excel do zero</td><td class="yes">Sim</td><td class="yes">Sim</td></tr>
+              <tr><td>Fórmulas básicas</td><td class="yes">Sim</td><td class="yes">Sim</td></tr>
+              <tr><td>Gráficos e formatação</td><td class="yes">Sim</td><td class="yes">Sim</td></tr>
+              <tr><td>Tabelas dinâmicas</td><td class="no">Não</td><td class="yes">Sim</td></tr>
+              <tr><td>Dashboards profissionais</td><td class="no">Não</td><td class="yes">Sim</td></tr>
+              <tr><td>Power Query</td><td class="no">Não</td><td class="yes">Sim</td></tr>
+              <tr><td>Automações e projetos corporativos</td><td class="no">Não</td><td class="yes">Sim</td></tr>
+              <tr><td>Certificado</td><td class="yes">Sim</td><td class="yes">Sim</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="inscricao">
+      <div class="container">
+        <div class="cta-box reveal">
+          <div>
+            <span class="eyebrow" style="background:rgba(255,255,255,.14);color:white;border-color:rgba(255,255,255,.18)">Inscrição</span>
+            <h2>Comece sua evolução no Excel hoje.</h2>
+            <p>Preencha seus dados e escolha o curso que mais combina com você. Depois, entre em contato pelo WhatsApp para finalizar a inscrição.</p>
+          </div>
+
+          <form class="lead-form reveal" id="leadForm">
+            <h3>Receber informações</h3>
+            <p>Informe seus dados para continuar.</p>
+            <div class="field"><input type="text" id="nome" placeholder="Seu nome" required></div>
+            <div class="field"><input type="email" id="email" placeholder="Seu melhor e-mail" required></div>
+            <div class="field"><input type="tel" id="whats" placeholder="WhatsApp" required></div>
+            <div class="field">
+              <select id="curso" required>
+                <option value="">Escolha o curso</option>
+                <option>Aprendiz do Excel</option>
+                <option>Mago do Excel Pro</option>
+                <option>Quero fazer os dois</option>
+              </select>
+            </div>
+            <button class="btn btn-primary btn-full" type="submit">Enviar pelo WhatsApp →</button>
+            <p class="form-note">Troque o número do WhatsApp no código antes de publicar.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">FAQ</span>
+          <h2>Dúvidas frequentes</h2>
+        </div>
+
+        <div class="faq-inner">
+          <div class="faq-item open reveal">
+            <button class="faq-q" type="button">Preciso saber Excel para começar?<span class="faq-icon">+</span></button>
+            <div class="faq-a">Não. O Aprendiz do Excel começa do básico e foi pensado para quem ainda está iniciando.</div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-q" type="button">Qual a diferença entre os cursos?<span class="faq-icon">+</span></button>
+            <div class="faq-a">O Aprendiz é o curso de entrada. O Mago do Excel Pro é mais avançado, com dashboards, Power Query, tabelas dinâmicas e automações.</div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-q" type="button">Tem certificado?<span class="faq-icon">+</span></button>
+            <div class="faq-a">Sim. Ambos os treinamentos contam com certificado de conclusão.</div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-q" type="button">As aulas são online?<span class="faq-icon">+</span></button>
+            <div class="faq-a">Sim. A proposta da landing está preparada para venda de cursos online.</div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-q" type="button">Posso fazer os dois cursos?<span class="faq-icon">+</span></button>
+            <div class="faq-a">Sim. Essa é a melhor jornada: começar como Aprendiz e depois evoluir para Mago do Excel Pro.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a class="footer-brand" href="#inicio">
+        <img src="images/mago_logo.jpg" alt="Logo Mago do Excel">
+        <strong>Mago do Excel</strong>
+      </a>
+      <p class="footer-note">© 2026 — Mago do Excel. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Intro roda primeiro, depois o script principal -->
+  <script src="js/intro.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
